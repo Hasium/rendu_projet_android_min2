@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListCountriesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:theme="@style/Platform.MaterialComponents.Light"
+        tools:context=".SearchPaysActivity">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:id="@+id/search_country_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/search_country_text_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country_search"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+
+                <SearchView
+                    android:id="@+id/search_country_searchview"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp"
+                    android:fadingEdgeLength="5dp"
+                    android:queryHint="Country or capital">
+
+                </SearchView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:theme="@style/Platform.MaterialComponents.Light">
+
+            <TextView
+                android:id="@+id/map_search_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_search" />
+
+            <Switch
+                android:id="@+id/map_search_switch"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/favories_only_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/favories_only_search" />
+
+            <Switch
+                android:id="@+id/favories_only_switch"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/advanced_search_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/advanced_search" />
+
+            <Switch
+                android:id="@+id/advanced_search_switch"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/advanced_search_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:id="@+id/advanced_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds"
+                android:theme="@android:style/Theme.Material.Light.Panel">
+
+                <TextView
+                    android:id="@+id/min_population_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/min_population"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/min_population_res_textview"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="0 k" />
+
+                    <SeekBar
+                        android:id="@+id/min_population_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="95"
+                        android:max="1600000"
+                        android:paddingLeft="60dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/max_population_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/max_population"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/max_population_res_textview"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="1 600 000 k" />
+
+                    <SeekBar
+                        android:id="@+id/max_population_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="95"
+                        android:max="1600000"
+                        android:progress="1600000" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/min_size_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/min_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/min_size_res_textview"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="0 k" />
+
+                    <SeekBar
+                        android:id="@+id/min_size_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="95"
+                        android:max="17500000"
+                        android:paddingLeft="60dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/max_size_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/max_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/max_size_res_textview"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="17 500 000 km²" />
+
+                    <SeekBar
+                        android:id="@+id/max_size_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="95"
+                        android:max="17500000"
+                        android:progress="17500000" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/search_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:layout_margin="10dp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_countries_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="80"
+            tools:listitem="@layout/country_view" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</FrameLayout>
