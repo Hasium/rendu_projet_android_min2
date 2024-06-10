@@ -14,7 +14,7 @@ Si la supposition est incorrecte, le joueur gagne 10 000 points moins la distanc
 
 ## Fonctionnalités supplémentaires
 
-- Affichage du résultat de la recherche des pays sous forme de carte.
+- Affichage du résultat de la recherche des pays sous forme de carte avec possibilité de cliquer sur le drapeau pour avoir le détail du pays.
 - Filtre des pays par population, taille et nom.
 - Ajout d'un jeu de devinettes sur les pays.
 - Affichage de l'emplacement du pays sur la carte lors de la vue detaillé d'un pays.
